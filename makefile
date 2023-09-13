@@ -6,8 +6,8 @@ stop:
 
 github: 
 	git add .
-	git commit -m "removing the unwanted files"
-#git push origin main
+	git commit -m "added VPC, subnets, gw, rout-table"
+	git push origin main
 
 tplan:
 	terraform plan
@@ -17,6 +17,6 @@ tdes:
 	terraform destroy 
 
 login:
-	ssh -i /Users/dhanushdinesh/Downloads/DevOpsProjectKey.pem ec2-user@54.197.211.18
+	ssh -i /Users/dhanushdinesh/Downloads/DevOpsProjectKey.pem ec2-user@54.227.9.234
 
 .PHONY: github, start, stop, login, tplan, tapply, tdes
