@@ -6,7 +6,7 @@ stop:
 
 github: 
 	git add .
-	git commit -m "added VPC, subnets, gw, rout-table"
+	git commit -m "added for_each"
 	git push origin main
 
 tplan:
