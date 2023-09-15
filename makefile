@@ -10,7 +10,7 @@ stop:
 
 github: 
 	git add .
-	git commit -m "Added useSystemClassLoader to pom.xml to fix a error"
+	git commit -m "Upgraded the jacoco version"
 	git push origin main
 
 tplan:
