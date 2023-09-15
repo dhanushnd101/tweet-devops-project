@@ -10,7 +10,7 @@ stop:
 
 github: 
 	git add .
-	git commit -m "Upgraded the jacoco version"
+	git commit -m "Change to test the webhook"
 	git push origin main
 
 tplan:
