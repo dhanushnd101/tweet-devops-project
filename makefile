@@ -10,7 +10,7 @@ stop:
 
 github: 
 	git add .
-	git commit -m "Updated jenkins file with clean deploy"
+	git commit -m "Added useSystemClassLoader to pom.xml to fix a error"
 	git push origin main
 
 tplan:
