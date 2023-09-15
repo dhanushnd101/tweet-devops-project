@@ -10,7 +10,7 @@ stop:
 
 github: 
 	git add .
-	git commit -m "Add Jenkinsfile"
+	git commit -m "added build step"
 	git push origin main
 
 tplan:
