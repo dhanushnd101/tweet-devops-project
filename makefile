@@ -10,7 +10,7 @@ stop:
 
 github: 
 	git add .
-	git commit -m "add setup-maven.yaml to configure maven server"
+	git commit -m "updated the code of one of the API calls"
 	git push origin main
 
 tplan:
