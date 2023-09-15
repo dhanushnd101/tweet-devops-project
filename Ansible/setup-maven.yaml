@@ -1,0 +1,26 @@
+---
+- hosts: build-slave
+  become: true
+
+  tasks:
+  - name: Update the apt and cache
+    apt:
+      update_cache: yes
+      cache_valid_time: 3600
+
+  - name: Install Java
+    apt:
+      name: openjdk-17-jre
+      state: present
+
+  - name: Unzip the Maven packages
+    unarchive:
+      src: https://dlcdn.apache.org/maven/maven-3/3.9.4/binaries/apache-maven-3.9.4-bin.tar.gz
+      dest: /opt
+      remote_src: yes
+
+  - name: Add to PATH to bash_profile
+    lineinfile:
+      path: /root/.profile
+      line:  'export PATH=$PATH:/opt/apache-maven-3.9.4/bin/'
+      create: yes
