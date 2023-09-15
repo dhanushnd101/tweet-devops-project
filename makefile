@@ -10,7 +10,7 @@ stop:
 
 github: 
 	git add .
-	git commit -m "updated the code of one of the API calls"
+	git commit -m "Add Jenkinsfile"
 	git push origin main
 
 tplan:
