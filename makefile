@@ -10,7 +10,7 @@ stop:
 
 github: 
 	git add .
-	git commit -m "Updated jenkins file with the correct path for mvn"
+	git commit -m "Updated jenkins file with clean deploy"
 	git push origin main
 
 tplan:
