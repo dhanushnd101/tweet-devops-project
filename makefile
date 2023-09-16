@@ -13,7 +13,7 @@ stop:
 
 github: 
 	git add .
-	git commit -m "Commented the env in jenkinsfile"
+	git commit -m "Added sonar-project.properties file"
 	git push origin main
 
 tplan:
