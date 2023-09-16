@@ -13,7 +13,7 @@ stop:
 
 github: 
 	git add .
-	git commit -m "Added sonar-project.properties file"
+	git commit -m "Added SonarQube analysis in Jenkins"
 	git push origin main
 
 tplan:
