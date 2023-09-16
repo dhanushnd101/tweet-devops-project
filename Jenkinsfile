@@ -12,12 +12,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                echo '<<<<<<<<<<<<<Start of Build>>>>>>>>>>>>'
+                sh 'mvn clean deploy -Dmaven.test.skip=true'
+                echo '<<<<<<<<<<<<<<End of Build>>>>>>>>>>>>>'
+            }
+        }
 
-                // Run Maven on a Unix agent.
-                sh 'mvn clean deploy'
-
-                // To run Maven on a Windows agent, use
-                // bat "mvn -Dmaven.test.failure.ignore=true clean package"
+        stage('Test'){
+            setps{
+                echo '<<<<<<<<<<<<<Start of Test>>>>>>>>>>>>'
+                sh 'mvn surefire-report:report'
+                echo '<<<<<<<<<<<<<<End of Test>>>>>>>>>>>>>'
             }
         }
 

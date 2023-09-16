@@ -13,7 +13,7 @@ stop:
 
 github: 
 	git add .
-	git commit -m "Found the bug :/"
+	git commit -m "Added the test stage"
 	git push origin main
 
 tplan:
