@@ -19,7 +19,7 @@ pipeline {
         }
 
         stage('Test'){
-            setps{
+            steps {
                 echo '<<<<<<<<<<<<<Start of Test>>>>>>>>>>>>'
                 sh 'mvn surefire-report:report'
                 echo '<<<<<<<<<<<<<<End of Test>>>>>>>>>>>>>'
