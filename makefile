@@ -13,7 +13,7 @@ stop:
 
 github: 
 	git add .
-	git commit -m "Change to trigger the poll-1"
+	git commit -m "Commented the env in jenkinsfile"
 	git push origin main
 
 tplan:
