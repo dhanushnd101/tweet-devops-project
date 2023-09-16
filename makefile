@@ -13,7 +13,7 @@ stop:
 
 github: 
 	git add .
-	git commit -m "Changed the SonarQube org name "
+	git commit -m "Found the bug :/"
 	git push origin main
 
 tplan:

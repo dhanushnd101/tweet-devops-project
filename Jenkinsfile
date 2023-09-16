@@ -23,7 +23,7 @@ pipeline {
 
         stage('SonarQube analysis') {
             environment {
-                scnnearHome = tool 'dnd-sonar-scanner'
+                scannerHome = tool 'dnd-sonar-scanner'
             }
             steps{
                     withSonarQubeEnv('dnd-sonarqube-server') { // If you have configured more than one global server connection, you can specify its name
