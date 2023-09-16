@@ -13,7 +13,7 @@ stop:
 
 github: 
 	git add .
-	git commit -m "Added SonarQube analysis in Jenkins"
+	git commit -m "Changed the SonarQube org name "
 	git push origin main
 
 tplan:
