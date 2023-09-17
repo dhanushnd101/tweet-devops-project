@@ -1,5 +1,5 @@
 def registry = 'https://dhanushnd.jfrog.io'
-def dockerImage = 
+def dockerImage = 'dhanushnd.jfrog.io/dnd-docker-local/ttrend'
 def dockerVersion = '2.1.2'
 
 pipeline {

@@ -13,7 +13,7 @@ stop:
 
 github: 
 	git add .
-	git commit -m "Updated the ansible script to install and start docker"
+	git commit -m "Added docker build step in the pipeline"
 	git push origin main
 
 tplan:
