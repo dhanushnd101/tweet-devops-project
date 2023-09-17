@@ -13,7 +13,7 @@ stop:
 
 github: 
 	git add .
-	git commit -m "Added Quality Gate"
+	git commit -m "Added the Jfrog artifactory stage in jenkisn"
 	git push origin main
 
 tplan:
