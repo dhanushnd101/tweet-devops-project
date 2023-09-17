@@ -118,7 +118,7 @@ resource "aws_iam_instance_profile" "worker" {
 
 ###############################################################################################################
 resource "aws_eks_cluster" "eks" {
-  name = "valaxy-eks-01"
+  name = "dnd-eks-01"
   role_arn = aws_iam_role.master.arn
 
   vpc_config {
@@ -146,7 +146,7 @@ resource "aws_eks_node_group" "backend" {
   disk_size = "20"
   instance_types = ["t2.small"]
   remote_access {
-    ec2_ssh_key = "dpp"
+    ec2_ssh_key = "DevOpsProjectKey"
     source_security_group_ids = [var.sg_ids]
   } 
   
