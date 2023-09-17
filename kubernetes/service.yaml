@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name:  dnd-rtp-service
+  namespace: dnd
+spec:
+  type: NodePort
+  selector:
+    app: dnd-rtp
+  ports:
+  - nodePort: 30082
+    port: 8000
+    targetPort: 8000
