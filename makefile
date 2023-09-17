@@ -13,7 +13,7 @@ stop:
 
 github: 
 	git add .
-	git commit -m "updated the comments in jenkisn"
+	git commit -m "Added a Dockerfile"
 	git push origin main
 
 tplan:
