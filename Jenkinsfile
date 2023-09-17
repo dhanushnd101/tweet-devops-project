@@ -30,7 +30,7 @@ pipeline {
             }
         }
         
-        /*  Commented to speed up the build
+        //   Commented to speed up the build
         stage('SonarQube analysis') {
             environment {
                 scannerHome = tool 'dnd-sonar-scanner'
@@ -57,7 +57,6 @@ pipeline {
                 }
             }
         }
-        */
 
         stage("Jar Publish") {
             steps {
@@ -102,6 +101,14 @@ pipeline {
                         app.push()
                     }
                     echo '<--------------- End of Deploy docker image to Jfrog --------------->'
+                }
+            }
+        }
+
+        stage('Deploy in EKS'){
+            steps{
+                script{
+                    sh './kubernetes/deploy.sh'
                 }
             }
         }

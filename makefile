@@ -13,7 +13,7 @@ stop:
 
 github: 
 	git add .
-	git commit -m "Added the script tag  in pipeline"
+	git commit -m "Added the deployment to EKS stage in Jenkins"
 	git push origin main
 
 tplan:
