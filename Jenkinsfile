@@ -86,19 +86,23 @@ pipeline {
 
         stage('Build docker image') {
             steps {
-                echo '<--------------- Start of Build Docker Image --------------->'
-                app = docker.build(dockerImage+":"+dockerVersion)
-                echo '<--------------- End of Build Docker Image --------------->'
+                script{
+                    echo '<--------------- Start of Build Docker Image --------------->'
+                    app = docker.build(dockerImage+":"+dockerVersion)
+                    echo '<--------------- End of Build Docker Image --------------->'
+                }
             }
         }
 
         stage('Deploy docker image to Jfrog') {
             steps {
-                echo '<--------------- Start of Deploy docker image to Jfrog --------------->'
-                docker.withRegistry(registry, 'jfrog-artifactory'){
-                    app.push()
+                script{
+                    echo '<--------------- Start of Deploy docker image to Jfrog --------------->'
+                    docker.withRegistry(registry, 'jfrog-artifactory'){
+                        app.push()
+                    }
+                    echo '<--------------- End of Deploy docker image to Jfrog --------------->'
                 }
-                echo '<--------------- End of Deploy docker image to Jfrog --------------->'
             }
         }
     }

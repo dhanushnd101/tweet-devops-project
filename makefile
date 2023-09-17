@@ -13,7 +13,7 @@ stop:
 
 github: 
 	git add .
-	git commit -m "Added docker push step in the pipeline"
+	git commit -m "Added the script tag  in pipeline"
 	git push origin main
 
 tplan:
