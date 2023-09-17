@@ -24,3 +24,24 @@
       path: /root/.profile
       line:  'export PATH=$PATH:/opt/apache-maven-3.9.4/bin/'
       create: yes
+  
+  - name: Install docker 
+    apt:
+      name: docker.io
+      state: present
+  
+  - name: Start docker service 
+    service:
+      name: docker
+      state: started
+  
+  - name: Start docker on boot
+    service:
+      name: docker
+      enabled: yes
+  
+  - name: Give 777 permission on docker.sock
+    file: 
+      path: /var/run/docker.sock
+      state: file
+      mode: 0777

@@ -9,11 +9,11 @@ stop:
 #Jenkins
 	aws ec2 stop-instances --instance-id i-0a1e83924e3f488e5
 #Ansible
-#	aws ec2 stop-instances --instance-id i-01925d6ae694f4d7d
+	aws ec2 stop-instances --instance-id i-01925d6ae694f4d7d
 
 github: 
 	git add .
-	git commit -m "Added a Dockerfile"
+	git commit -m "Updated the ansible script to install and start docker"
 	git push origin main
 
 tplan:
@@ -23,8 +23,8 @@ tapply:
 tdes:
 	terraform destroy 
 
-ansible:
-	ssh -i /Users/dhanushdinesh/Downloads/DevOpsProjectKey.pem ubuntu@54.158.9.67
+ans:
+	ssh -i /Users/dhanushdinesh/Downloads/DevOpsProjectKey.pem ubuntu@54.152.59.165
 
 jen:
 	ssh -i /Users/dhanushdinesh/Downloads/DevOpsProjectKey.pem ubuntu@54.87.116.217
@@ -33,4 +33,4 @@ jen:
 mvn:
 	ssh -i /Users/dhanushdinesh/Downloads/DevOpsProjectKey.pem ubuntu@34.229.192.82
 
-.PHONY: github, start, stop, ansible, tplan, tapply, tdes, jen, mvn
+.PHONY: github, start, stop, ans, tplan, tapply, tdes, jen, mvn
