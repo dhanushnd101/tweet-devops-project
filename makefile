@@ -13,7 +13,7 @@ stop:
 
 github: 
 	git add .
-	git commit -m "Added the Jfrog artifactory stage in jenkisn"
+	git commit -m "updated the comments in jenkisn"
 	git push origin main
 
 tplan:

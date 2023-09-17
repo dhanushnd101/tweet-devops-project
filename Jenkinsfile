@@ -28,8 +28,7 @@ pipeline {
             }
         }
         
-        // Commented to speed up the build
-        '''
+        /*  Commented to speed up the build
         stage('SonarQube analysis') {
             environment {
                 scannerHome = tool 'dnd-sonar-scanner'
@@ -56,7 +55,8 @@ pipeline {
                 }
             }
         }
-        '''
+        */
+
         stage("Jar Publish") {
             steps {
                 script {
