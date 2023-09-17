@@ -13,7 +13,7 @@ stop:
 
 github: 
 	git add .
-	git commit -m "Added the test stage"
+	git commit -m "Added Quality Gate"
 	git push origin main
 
 tplan:
@@ -27,7 +27,7 @@ ansible:
 	ssh -i /Users/dhanushdinesh/Downloads/DevOpsProjectKey.pem ubuntu@54.158.9.67
 
 jen:
-	ssh -i /Users/dhanushdinesh/Downloads/DevOpsProjectKey.pem ubuntu@18.207.191.21
+	ssh -i /Users/dhanushdinesh/Downloads/DevOpsProjectKey.pem ubuntu@54.87.116.217
 	#523aea3a7f43428680c837a69acb6c97
 
 mvn:
