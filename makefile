@@ -13,7 +13,7 @@ stop:
 
 github: 
 	git add .
-	git commit -m "Added build ID as a tag"
+	git commit -m "Updated the code and deploying a new version"
 	git push origin main
 
 tplan:

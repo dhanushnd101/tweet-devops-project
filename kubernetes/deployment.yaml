@@ -17,7 +17,7 @@ spec:
       - name: jfrogcred2
       containers:
       - name:  dnd-rtp
-        image: dhanushnd.jfrog.io/dnd-docker/ttrend:2.1.2
+        image: dhanushnd.jfrog.io/dnd-docker/ttrend:2.1.3
         imagePullPolicy: Always
         ports:
         - containerPort: 8000

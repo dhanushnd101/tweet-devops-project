@@ -1,6 +1,6 @@
 def registry = 'https://dhanushnd.jfrog.io'
 def dockerImage = 'dhanushnd.jfrog.io/dnd-docker-local/ttrend'
-def dockerVersion = '2.1.2'
+def dockerVersion = '2.1.3'
 
 pipeline {
     agent {
@@ -87,7 +87,7 @@ pipeline {
             steps {
                 script{
                     echo '<--------------- Start of Build Docker Image --------------->'
-                    app = docker.build(dockerImage+":"+dockerVersion+BUILD_ID)
+                    app = docker.build(dockerImage+":"+dockerVersion)
                     echo '<--------------- End of Build Docker Image --------------->'
                 }
             }
