@@ -108,7 +108,7 @@ pipeline {
         stage('Deploy in EKS'){
             steps{
                 script{
-                    sh './kubernetes/deploy.sh'
+                    sh './deploy.sh'
                 }
             }
         }
