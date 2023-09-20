@@ -1,6 +1,6 @@
 github: 
 	git add .
-	git commit -m "Added the zip file"
+	git commit -m "Added a helm deployment jenkins file "
 	git push origin main
 
 start:

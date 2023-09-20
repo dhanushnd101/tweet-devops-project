@@ -109,8 +109,18 @@ pipeline {
             steps{
                 script{
                     echo '<--------------- Start of Deploy in EKS --------------->'
-                    sh './deploy.sh'
+                    // sh './deploy.sh'
                     echo '<--------------- End of Deploy in EKS --------------->'
+                }
+            }
+        }
+
+        stage('Deploy on Helm '){
+            steps{
+                script{
+                    echo '<--------------- Start of Deploy in Helm --------------->'
+                    sh 'helm install ttrend ttrend-0.1.0.tgz'
+                    echo '<--------------- End of Deploy in Helm --------------->'
                 }
             }
         }
